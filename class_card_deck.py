@@ -16,3 +16,13 @@ class CardDeck:
             return random_card
         else:
             return None
+
+    def draw_three_cards(self):
+        card1 = self.pull_out_random_card()
+        card2 = self.pull_out_random_card()
+        card3 = self.pull_out_random_card()
+        return card1, card2, card3
+
+    def put_cards_in_deck(self, cards):
+        for card in cards:
+            self.deck.append(card)
